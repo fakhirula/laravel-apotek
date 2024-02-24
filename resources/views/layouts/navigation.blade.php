@@ -16,6 +16,39 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
                 </div>
+
+                @if ( Auth::user()->role === "admin" || Auth::user()->role === "employee")
+
+                    <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                        <x-nav-link :href="route('medicine.index')" :active="request()->routeIs('medicine.index')">
+                            {{ __('Medicine') }}
+                        </x-nav-link>
+                    </div>
+
+                    <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                        <x-nav-link :href="route('category.index')" :active="request()->routeIs('category.index')">
+                            {{ __('Category') }}
+                        </x-nav-link>
+                    </div>
+
+                    <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                        <x-nav-link :href="route('supply.index')" :active="request()->routeIs('supply.index')">
+                            {{ __('Supply') }}
+                        </x-nav-link>
+                    </div>
+
+                    <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                        <x-nav-link :href="route('supplier.index')" :active="request()->routeIs('supplier.index')">
+                            {{ __('Supplier') }}
+                        </x-nav-link>
+                    </div>
+
+                    <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                        <x-nav-link :href="route('transaction.index')" :active="request()->routeIs('transaction.index')">
+                            {{ __('Transaction') }}
+                        </x-nav-link>
+                    </div>
+                @endif
             </div>
 
             <!-- Settings Dropdown -->
