@@ -33,7 +33,7 @@ class CategoryController extends Controller
     {
         $validatedData = $request->validate([
             'name' => 'required',
-            'description' => 'required|text',
+            'description' => 'required',
         ]);
 
         Category::create($validatedData);
@@ -72,7 +72,7 @@ class CategoryController extends Controller
 
         $validatedData = $request->validate([
             'name' => 'required',
-            'description' => 'required|text',
+            'description' => 'required',
         ]);
 
         $category->update($validatedData);

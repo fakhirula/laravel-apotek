@@ -17,6 +17,8 @@ return new class extends Migration
             $table->unsignedBigInteger('id_category');
             $table->integer('price');
             $table->integer('stock');
+            $table->string('image');
+            $table->text('description');
             $table->unsignedBigInteger('id_supplier');
             $table->timestamps();
         });

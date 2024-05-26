@@ -33,7 +33,7 @@ class SupplierController extends Controller
     {
         $validatedData = $request->validate([
             'name' => 'required',
-            'address' => 'required|text',
+            'address' => 'required',
             'city' => 'required',
             'contact_person' => 'required',
             'telp' => 'required',
@@ -75,7 +75,7 @@ class SupplierController extends Controller
 
         $validatedData = $request->validate([
             'name' => 'required',
-            'address' => 'required|text',
+            'address' => 'required',
             'city' => 'required',
             'contact_person' => 'required',
             'telp' => 'required',

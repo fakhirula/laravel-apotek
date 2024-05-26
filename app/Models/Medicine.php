@@ -15,6 +15,8 @@ class Medicine extends Model
         'id_category',
         'price',
         'stock',
+        'image',
+        'description',
         'id_supplier'
     ];
 
